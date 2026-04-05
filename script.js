@@ -1,38 +1,44 @@
-const cria = document.getElementById("b");
-const btn = document.getElementById("btn");
+const produto ={
+	"123":{"nome:"bisteca do 7 ","preco": 25.30 },
+	"147":{"nome:"miolo de alcatar","preco": 30.00 },
+	"456":{"nome":"carvão/P","preco":50.99},
+	"654":{"nome":"sal grosso","preco":5.99},
+	"789":{"nome":"picanha","preco":40.30},
+	"466":{"nome":"grelha","preco":70.00},
+	"321":{"nome:"tulipinha","preco": 5.99 },
+	};
+let carinho=[];
+const audio = new Audio("bip.mp3");
+window.onload=()=> {
+	document.getElementeById("cod").focus();
 
-const estados = {
-    normal:  "normal.png",
-    puto: "bravo.png",
-    morto: "morto.png",
-    comendo: "comendo.png",
-    alimentado: "comida(2).png",
 }
-
-let contador = 0; 
-let intervalo = null;
-let time_click = null;
-let time_out = null;
-
-function controlador (){
-    if(intervalo) clearInterval(intervalo)
-        
-        intervalo = setInterval(() => {
-            contador++;
-
-            console.log("tempo:",contador);
-
-            
-            if (contador == 10){
-                cria.src = estados.puto;
-            }
-
-            if(contador == 15){
-                cria.src = estados.morto;
-            }
-            
-        }, 1000);
+function addproduto(){
+	const codElemento = document.getElementeById("cod");
+	const qtdElemento= document.getElementeById("qtd");
+	cons codValue= codElemento.Vaule;
+	cons qtdValue=qtdElemento.Value;
+	if (!produto[codValue]){
+		alert("produto não encontrado");
+		return;
+       }
+	const produtoBase = produtos[codValue];
+	const item ={ 
+	nome: produtoBase.nome,preco:produtoBase.preco,produtoBase.qntValue,
+	subtot: produtoBase.preco*qtdValue
+	
+	};
+	carrinho.push(item);
+	audio.correnTime=0;
+	audio.play();
+	atualizaTela();
+	
+};
+funtion atualizaTela(){
+	let total =0;
+	const list = document.getElementoBTId("lista");
+	li.classeName = "list-group-item"
+	li.innerHTML = `<div>${item.nome} ---- 
+	${item.quantidade} X ${item.preco}=${item.subtot} </div>`;
+	lista.appendChhild(li);
 }
-
-
-controlador();

@@ -1,50 +1,56 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>alguma coisa</title>
-	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-   <style>
-	.topo {
-	background:#800080;
-	text-align: center;
-	font-size:43px;
-	border: 4px "solid #000ead;"
-	}
-	</style>
+<head>
+  <meta charset="UTF-8">
+  <title>Caixa</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .topo {
+      background: #800080;
+      text-align: center;
+      font-size: 40px;
+      color: white;
+      padding: 10px;
+    }
+  </style>
 </head>
+
 <body class="bg-primary bg-gradient">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
- <div="topo">Caixa</div>
-   <div class="conteiner mt-3">
-    <div class-="row mt-3">
-     <div class="badge text-bg-primary">
-	<h3>SUA COMPRA</h3>
-	<span class="badge text-bg-primary>SUA COMPRA</span>
-	<ul id="lista" class="list-group lista"><ul>
-     </div>
-   </div>
- </div>
-</div> 
-<div classe="col-md-7">
- <div class="painel total">
-   <span id="total" style="text-color:#RRGGBB; ">0,00</span>
-</body>
 
+  <div class="topo">Caixa</div>
 
-   <div class="panel">
-	<label>codigo de barra </ladel>
-	<input type=id="qtdElemento" class = "from-control" value="1">
-	<button class="btn-success w-100" onclick="addproduto()">
-		adicinar produto
-	 </button>
+  <div class="container mt-4">
+    <div class="row">
+
+      <!-- LISTA -->
+      <div class="col-md-5">
+        <div class="bg-light p-3 rounded">
+          <h3>SUA COMPRA</h3>
+          <ul id="lista" class="list-group"></ul>
+        </div>
+      </div>
+
+      <!-- CONTROLE -->
+      <div class="col-md-7">
+        <div class="bg-light p-3 rounded">
+
+          <h4>Total: R$ <span id="total">0.00</span></h4>
+
+          <label>Código do produto</label>
+          <input id="codValue" class="form-control mb-2">
+
+          <button class="btn btn-success w-100" onclick="addproduto()">
+            Adicionar produto
+          </button>
+
+        </div>
+      </div>
+
+    </div>
   </div>
- </div>
-</div>
-<script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
-	
-</html> 
+</html>

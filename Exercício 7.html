@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Segurança Infinity</title>
+    <link rel="stylesheet" href="style ex7.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Validador de Segurança Infinity</h1>
+        <input type="text" id="cardNumber" placeholder="Digite o número do cartão (até 16 dígitos)">
+        <button onclick="analyzeCard()">Analisar Cartão</button>
+        <div id="result"></div>
+    </div>
+    <select id="digitOptions">
+        <option value="digito 1">Dígito 1</option>
+        <option value="Dígitos 2 a 5">Dígitos 2 a 5</option>
+        <option value="Dígitos 6 a 8">Dígitos 6 a 8</option>
+        <option value="Dígito 9 em diante">Dígito 9 em diante</option>
+    </select>
+
+    <h1>Atribuição de Dados</h1>
+    <input type="text" id="sectorCode" placeholder="Digite o código do setor industrial geral">
+    <input type="text" id="geographicCode" placeholder="Digite o código geográfico">
+    <input type="text" id="productWalletCode" placeholder="Digite o código da carteira de produtos">
+    <input type="text" id="accountNumber" placeholder="Digite o número da conta">
+    <button onclick="assignData()">Atribuir Dados</button>
+
+    <h2>Finalidade no Processamento de Dados</h2>
+   <input type="text" id="processingPurpose" placeholder="Digite a finalidade do processamento de dados">
+   <input type="text" id="originCountryBank" placeholder="Digite o país de origem e o banco detentor do lote">
+    <input type="text" id="productType" placeholder="Digite se o produto é Pré-pago, Débito ou Crédito">
+    <input type="text" id="customerId" placeholder="Digite a identificação única do cliente">
+    <button onclick="processData()">Processar Dados</button>
+    
+    <script src="script ex7.js"></script>
+</body>
+</html>
